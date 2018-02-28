@@ -2,7 +2,9 @@
 date=$(date -Iminutes)
 uid=$(cat `dirname $0`"/"config.conf)
 dir=$(cat `dirname $0`"/"dir.conf)
-sudo touch $dir$date
+touch $dir$date
+chmod ug+w $dir$date
 vim $dir$date 2>/dev/null
-gpg -e -r $uid $dir$date
-sudo shred -u $dir$date
+gpg --yes -e -r $uid $dir$date
+shred -u $dir$date
+chmod ug+w $dir$date".gpg"
