@@ -9,9 +9,12 @@ then
 fi
 cd /usr/lib
 mkdir encrypt-journaling
-cp $curdir/"config.conf" $basedir
-cp $curdir/"dir.conf" $basedir
-cp $curdir/"journal.sh" $basedir
-cp $curdir/"vim-journal.sh" $basedir
-ln -sf $basedir"vim-journal.sh" /usr/bin/journal 
+cp -p $curdir/"config.conf" $basedir
+cp -p $curdir/"dir.conf" $basedir
+cp -p $curdir/"journal.sh" $basedir
+cp -p $curdir/"vim-journal.sh" $basedir
+cp -p $curdir/"read-journal.sh" $basedir
+ln -sf $basedir"vim-journal.sh" /usr/bin/vim-journal 
 ln -sf $basedir"journal.sh" /usr/bin/journal
+ln -sf $basedir"read-journal.sh" /usr/bin/read-journal
+
