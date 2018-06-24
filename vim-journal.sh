@@ -1,7 +1,8 @@
 #!/bin/sh
 date=$(date -Iminutes)
-uid=$(cat `dirname $0`"/"config.conf)
-dir=$(cat `dirname $0`"/"dir.conf)
+uid=$(cat "/usr/lib/encrypt-journaling/"config.conf)
+dir=$(cat "/usr/lib/encrypt-journaling/"dir.conf)
+echo $dir $uid
 touch $dir$date
 chmod ug+w $dir$date
 vim $dir$date 2>/dev/null

@@ -8,7 +8,6 @@ then
     exit
 fi
 cd /usr/lib
-mkdir encrypt-journaling
 cp -p $curdir/"config.conf" $basedir
 cp -p $curdir/"dir.conf" $basedir
 cp -p $curdir/"journal.sh" $basedir
